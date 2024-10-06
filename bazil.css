@@ -1,0 +1,79 @@
+/* Basic styling */
+body {
+    margin: 0;
+    padding: 0;
+    height: 200vh; /* Height to allow scrolling */
+    background-color: #1e1e1e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .content {
+    margin: 50px;
+  }
+  
+  .interactive-btn,
+  .interactive-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #d91ef1;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .interactive-btn:hover,
+  .interactive-link:hover {
+    background-color: #ff4f00;
+  }
+  
+  /* Custom cursor styles */
+  .rounded,
+  .pointed {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.1s ease-out;
+  }
+  
+  .rounded {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    z-index: 1000;
+    transition: transform 0.2s ease-out;
+  }
+  
+  .pointed {
+    width: 10px;
+    height: 10px;
+    background-color: #ff7f50;
+    z-index: 1001;
+    transition: transform 0.1s ease-out;
+  }
+  
+  /* Cursor effects on interactive elements */
+  .interactive-btn:hover ~ .rounded,
+  .interactive-link:hover ~ .rounded {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 127, 80, 0.2);
+  }
+  
+  .interactive-btn:hover ~ .pointed,
+  .interactive-link:hover ~ .pointed {
+    background-color: #ff4f00;
+    transform: rotate(45deg);
+  }
+  
+  /* Scale and color change */
+  body:hover ~ .rounded {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  
